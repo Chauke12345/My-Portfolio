@@ -1,0 +1,676 @@
++ hero + styles
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Miehleketo Chauke | Developer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL DARK THEME ===== */
+body {
+    background: #0a0a0f;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===== GRADIENT BACKGROUND ===== */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #6c63ff, transparent);
+    top: -200px;
+    left: -200px;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #00c6ff, transparent);
+    bottom: -200px;
+    right: -200px;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img {
+    width: 140px;
+    border-radius: 50%;
+    border: 3px solid #6c63ff;
+    box-shadow: 0 0 30px #6c63ff;
+}
+
+/* NAME */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #6c63ff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ROLE */
+.hero p.role {
+    color:white;
+    font-size: 1.2rem;
+}
+
+/* BUTTONS */
+.btn-glow {
+    background: linear-gradient(45deg, #6c63ff, #00c6ff);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #6c63ff;
+}
+
+/* GLASS CARD */
+.glass {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(108,99,255,0.4);
+}
+
+/* PROJECT CARDS */
+.project-card img {
+    border-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* SKILLS BADGES */
+.badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+/* CURSOR GLOW */
+#cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(108,99,255,0.3), transparent);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="cursor-glow"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="#">MC</a>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="hero-section min-vh-100 d-flex align-items-center" id="home">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            
+            <!-- Left Content -->
+            <div class="col-lg-7 text-center text-lg-start text-white">
+                <span class="hero-badge mb-3 d-inline-block">
+                   
+                </span>
+
+                <h1 class="display-2 fw-bold mb-4">
+                 <h1 class="mb-3">
+    <span class="text-primary">Hi, I’m Miehleketo Chauke</span>
+</h1>
+
+<h2 class="hero-title mb-4">
+    Junior Full-Stack Developer | JavaScript • Html & Css • Python • Django
+</h2>
+
+<p class="hero-description mb-4">
+    I build practical, user-focused web applications using modern full-stack technologies. I focus on clean, functional design, API integration, and creating systems that solve real-world problems.
+</p>
+
+<p class="hero-description mb-5">
+    With a background in IT support, healthcare administration, and cybersecurity, I bring strong problem-solving skills and real-world experience working with users and systems in fast-paced environments.
+</p>
+
+<div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+    <!-- buttons go here -->
+</div>
+    <a href="#contact" class="btn btn-primary btn-lg me-3 px-4">
+        Contact Me
+    </a>
+
+    <a href="#contact" class="btn btn-outline-light btn-lg px-4">
+        Let's Work Together
+    </a>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-lg-5 text-center">
+                <div class="hero-image-container">
+                    <img src="assets/img/portfolio/WEB.jpg"
+                         alt="Miehleketo Chauke"
+                         class="img-fluid hero-profile-image">
+                </div>
+            </div>
+
+    </div>
+</section>
+   <!-- About Section -->
+<section class="page-section bg-black text-white" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <!-- Image -->
+            <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+                <img src="assets/img/portfolio/which-development-job-is-right-for-you.jpg"
+                     alt="Profile Image"
+                     class="img-fluid rounded-circle shadow-lg"
+                     style="max-width: 300px;">
+            </div>
+
+<!-- Text -->
+<div class="col-lg-7">
+
+    <h2 class="section-heading text-uppercase mb-4 text-white">
+        About Me
+    </h2>
+
+    <div class="text-white">
+
+        <p class="lead">
+            I am a career-changer with experience in healthcare administration, IT support, and cybersecurity, 
+            which has given me strong problem-solving skills and a practical understanding of how users interact 
+            with technology in real-world environments.
+        </p>
+
+        <p>
+            After completing a cybersecurity program, I transitioned into software development and now focus on 
+            building full-stack web applications using JavaScript and Python (Django). I enjoy turning ideas into 
+            functional, user-focused applications and continuously improving my technical skills through hands-on projects.
+        </p>
+
+        <h5 class="mt-3 text-uppercase">
+            What I’m Looking For
+        </h5>
+
+        <p>
+            I am seeking a Junior Software Developer or internship opportunity where I can contribute to real-world 
+            projects using JavaScript, HTML, CSS, Python, and Django. I am eager to grow in a team environment, 
+            gain professional experience, and further develop my backend and full-stack development skills.
+        </p>
+
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </div>
+</section>
+
+    </div>
+</section>
+<section id="projects" class="py-5">
+  <div class="container">
+
+    <!-- TITLE -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">My Projects</h2>
+      <p class="text-muted">Some of the work I’ve built recently</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- PROJECT 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card p-3 h-100">
+
+          <img src="assets/img/portfolio/saladyourway-home.png" class="img-fluid mb-3">
+
+          <h5>Food Delivery App</h5>
+
+          <p  class="card-text text-white-80">
+            Responsive food ordering platform with dynamic UI and smooth user experience.
+          </p>
+          
+          <p class="small text-info">✔ Built with real user interaction</p>
+
+          <!-- TECH -->
+          <div class="mb-3">
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-info">JavaScript</span>
+          </div>
+
+          <!-- BUTTONS -->
+          <div class="d-flex gap-2">
+            <a href="Chapter 12/GingerBreadman.html" class="btn btn-glow btn-sm">Live</a>
+            <a href="https://github.com/Chauke12345/My-Portfolio/tree/6fe6e734d37d1e934df0456983d893b8d44d7b7d/Eddies-main/Chapter%2012" class="btn btn-outline-light btn-sm">Code</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card p-3 h-100">
+
+          <img src="assets/img/portfolio/COFFEE SHOP.jpg" class="img-fluid mb-3">
+
+          <h5>E-Commerce Website</h5>
+
+          <p class="card-text text-white-80">
+            Online store with product listings, cart system, and responsive layout.
+          </p>
+          <p class="small text-info">✔ Built with real user interaction</p>
+
+          <div class="mb-3">
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-info">JavaScript</span>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="Coffee Shop/Coffe Shop.html" class="btn btn-glow btn-sm">Live</a>
+            <a href="https://github.com/Chauke12345/My-Portfolio/blob/6fe6e734d37d1e934df0456983d893b8d44d7b7d/Eddies-main/Coffee%20Shop/Coffe%20Shop.html" class="btn btn-outline-light btn-sm">Code</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card p-3 h-100">
+
+          <img src="assets/img/portfolio/delicious-food-menu-landing-page-template-homepage-design_631465-116.avif" class="img-fluid mb-3">
+
+          <h5>Shopping Cart System</h5>
+
+          <p class="card-text text-white-80">
+            Functional cart system with item management and checkout logic.
+          </p>
+          <p class="small text-info">✔ Built with real user interaction</p>
+          <div class="mb-3">
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-info">JavaScript</span>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="Shopping Cart/Shopping cart.html" class="btn btn-glow btn-sm">Live</a>
+            <a href="https://github.com/Chauke12345/My-Portfolio/blob/6fe6e734d37d1e934df0456983d893b8d44d7b7d/Eddies-main/Shopping%20Cart/Shopping%20cart.html" class="btn btn-outline-light btn-sm">Code</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass project-card p-3 h-100">
+
+          <img src="assets/img/portfolio/REAL QUIZ.jpg" class="img-fluid mb-3">
+
+          <h5>Quiz Game</h5>
+
+          <p class="card-text text-white-80">
+            Interactive quiz app with score tracking and instant feedback.
+          </p>
+          <p class="small text-info">✔ Built with real user interaction</p>
+
+          <div class="mb-3">
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-info">JavaScript</span>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="PROJECT 2/Number Quizz.html" class="btn btn-glow btn-sm">Live</a>
+            <a href="https://github.com/Chauke12345/My-Portfolio/blob/6fe6e734d37d1e934df0456983d893b8d44d7b7d/Eddies-main/PROJECT%202/Number%20Quizz.html" class="btn btn-outline-light btn-sm">Code</a>
+          </div>
+
+        </div>
+      </div>
+      <!-- PROJECT 7 -->
+<div class="col-md-6 col-lg-4">
+    <div class="glass project-card p-4 h-100">
+        <img src="assets/img/portfolio/loan-lending.webp"
+             class="img-fluid rounded mb-3"
+             alt="Loan Lending Management System">
+
+        <h5 class="fw-bold">Loan Lending Management System</h5>
+
+        <p class="card-text text-white-80">
+            Full-stack Django application for managing loan applications, customer records, and lending operations.
+        </p>
+
+        <p class="small text-info">✔ Django CRUD & Authentication</p>
+
+        <div class="mb-3">
+            <span class="badge bg-success">Python</span>
+            <span class="badge bg-dark">Django</span>
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-info">Bootstrap</span>
+            <span class="badge bg-secondary">SQLite</span>
+        </div>
+
+        <div class="d-flex gap-2">
+            <a href="https://loan-app-management.onrender.com" class="btn btn-glow btn-sm">Live Demo</a>
+            <a href="https://github.com/Chauke12345/Loan-app-management.git" class="btn btn-outline-light btn-sm">Source Code</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <div class="glass project-card p-4 h-100">
+
+        <img src="assets/img/portfolio/kof4.jpg"
+             class="img-fluid rounded mb-3"
+             alt="Eddie's Gamehub">
+
+        <h5 class="fw-bold">Eddie's Gamehub</h5>
+
+        <p class="card-text text-white-80">
+            Full-stack e-commerce web application with product listings, shopping cart, user authentication, and order management system built using Django.
+        </p>
+
+        <p class="small text-info">
+            ✔ User authentication & session handling <br>
+            ✔ Shopping cart & checkout flow <br>
+            ✔ Product catalog with dynamic rendering
+        </p>
+
+        <div class="mb-3">
+            <span class="badge bg-success">Python</span>
+            <span class="badge bg-dark">Django</span>
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-info">Bootstrap</span>
+            <span class="badge bg-warning text-dark">JavaScript</span>
+        </div>
+
+        <div class="d-flex gap-2">
+            <div class="d-flex gap-2">
+            <a href="https://youtu.be/xmTsUmhADi0?si=Ay0r0UJ9DvrYGkvC" class="btn btn-glow btn-sm">Live Demo</a>
+            <a href="https://github.com/Chauke12345/Eddies-Gamehub.git" class="btn btn-outline-light btn-sm">Source Code</a>
+        </div>
+
+    </div>
+</div>
+        
+    </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="page-section bg-dark text-white" id="skills">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-heading text-uppercase">Skills</h2>
+            <h3 class="section-subheading text-muted">
+                Technologies and tools I use to build modern web applications.
+            </h3>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Frontend -->
+            <div class="col-md-4">
+                <div class="card bg-black border-0 shadow-lg h-100 skill-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-code fa-3x text-primary mb-4"></i>
+                        <h4 class="text-white mb-3">Frontend Development</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="badge bg-primary">HTML5</span>
+                            <span class="badge bg-primary">CSS3</span>
+                            <span class="badge bg-primary">JavaScript (ES6+)</span>
+                            <span class="badge bg-primary">Bootstrap</span>
+                            <span class="badge bg-primary">Responsive Web Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="col-md-4">
+                <div class="card bg-black border-0 shadow-lg h-100 skill-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-server fa-3x text-success mb-4"></i>
+                        <h4 class="text-white mb-3">Backend Development</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="badge bg-success">Python</span>
+                            <span class="badge bg-success">Django</span>
+                            <span class="badge bg-success">REST APIs</span>
+                            <span class="badge bg-success">Server-side Logic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="col-md-4">
+                <div class="card bg-black border-0 shadow-lg h-100 skill-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-database fa-3x text-info mb-4"></i>
+                        <h4 class="text-white mb-3">Databases</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="badge bg-info">SQL Fundamentals</span>
+                            <span class="badge bg-info">SQLite</span>
+                            <span class="badge bg-info">Database Design (CRUD)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Workflow -->
+            <div class="col-md-4">
+                <div class="card bg-black border-0 shadow-lg h-100 skill-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-tools fa-3x text-warning mb-4"></i>
+                        <h4 class="text-white mb-3">Tools & Workflow</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="badge bg-warning text-dark">Git</span>
+                            <span class="badge bg-warning text-dark">GitHub</span>
+                            <span class="badge bg-warning text-dark">VS Code</span>
+                            <span class="badge bg-warning text-dark">Render</span>
+                            <span class="badge bg-warning text-dark">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Systems & IT Background -->
+            <div class="col-md-4">
+                <div class="card bg-black border-0 shadow-lg h-100 skill-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-shield-alt fa-3x text-secondary mb-4"></i>
+                        <h4 class="text-white mb-3">Systems & IT Background</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="badge bg-secondary">IT Support & Troubleshooting</span>
+                            <span class="badge bg-secondary">Cybersecurity Fundamentals</span>
+                            <span class="badge bg-secondary">System Debugging</span>
+                            <span class="badge bg-secondary">User Support & Issue Resolution</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /row -->
+
+    </div> <!-- /container -->
+</section>
+
+<section id="contact" class="py-5 bg-black text-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Contact Me</h2>
+            <p class="text-muted">
+                Have a project in mind? Let's work together.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="glass p-4">
+                    <form action="https://formspree.io/f/xeevvqkp" method="POST">
+
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control"
+                                   placeholder="Your Name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control"
+                                   placeholder="Your Email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control"
+                                      rows="5"
+                                      placeholder="Your Message"
+                                      required></textarea>
+                        </div>
+
+                        <input type="hidden"
+                               name="_subject"
+                               value="New message from Miehleketo Portfolio">
+
+                        <input type="text"
+                               name="_gotcha"
+                               style="display:none">
+
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+                            Send Message
+                        </button>
+
+                    </form>
+                </div>
+                <hr class="my-4 border-secondary">
+
+<div class="text-center">
+    <h5 class="mb-4">Or Connect With Me</h5>
+
+    <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+        
+        <!-- WhatsApp -->
+        <a href="https://wa.me/2733141222"
+           target="_blank"
+           class="btn btn-success btn-lg">
+            <i class="fab fa-whatsapp me-2"></i>
+            WhatsApp Me
+        </a>
+
+    <a href="assets/img/portfolio/cover letter.pdf"
+   download
+   class="btn btn-outline-light btn-lg me-2">
+    <i class="fas fa-file-alt me-2"></i>
+    Cover Letter
+</a>
+
+<a href="assets/img/portfolio/Miehleketo-E-Chauke-CV.pdf"
+   download
+   class="btn btn-outline-light btn-lg">
+    <i class="fas fa-download me-2"></i>
+    Download CV
+</a>
+        </a>
+    </div>
+</div>
+          <footer class="py-5 bg-black text-white border-top border-secondary">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <!-- Copyright -->
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p class="mb-0 text-muted">
+                    © 2026 Miehleketo Chauke. All Rights Reserved.
+                </p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="col-md-6 text-center text-md-end">
+                <a href="https://github.com/yourusername"
+                   target="_blank"
+                   class="text-white fs-4 me-3">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/yourusername"
+                   target="_blank"
+                   class="text-white fs-4 me-3">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:your@email.com"
+                   class="text-white fs-4">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+        
+
+
+</body>
+</html>

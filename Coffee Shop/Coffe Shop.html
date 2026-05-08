@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Coffee Shop Order Form</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Coffe Shop.css">
+</head>
+
+<body>
+     <!-- Back Button -->
+    <button id="backButton" class="back-btn" onclick="history.back()">
+        ← Back
+    </button>
+
+    <div class="container">
+        <div class="order-card">
+
+            <!-- Header Section -->
+            <div class="form-header">
+                <img 
+                    src="https://cdnimg.webstaurantstore.com/uploads/seo_category/2025/1/chinacupsmugssaucers.jpg" 
+                    alt="Coffee Shop Logo" 
+                    class="logo"
+                >
+                <h1>☕ Coffee Shop</h1>
+                <p>Freshly brewed happiness delivered to your door</p>
+            </div>
+
+            <!-- Order Form -->
+            <form id="orderForm" class="order-form">
+
+                <div class="input-group">
+                    <label for="numCoffee">How many cups?</label>
+                    <input 
+                        type="number" 
+                        id="numCoffee" 
+                        min="1" 
+                        placeholder="Enter quantity"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="typeCoffee">Choose your drink</label>
+                    <select id="typeCoffee">
+                        <option value="Coffee">Coffee</option>
+                        <option value="Tea">Tea</option>
+                        <option value="Americano">Americano</option>
+                        <option value="Espresso">Espresso</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="deliveryCity">Delivery Location</label>
+                    <select id="deliveryCity">
+                        <option value="Midrand">Midrand</option>
+                        <option value="Fourways">Fourways</option>
+                        <option value="Featherbrooke">Featherbrooke</option>
+                        <option value="Sunninghill">Sunninghill</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="milkAndSugar">Milk & Sugar</label>
+                    <select id="milkAndSugar">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <button type="button" id="placeOrder" class="order-btn">
+                    Place Order
+                </button>
+
+            </form>
+
+            <!-- Order Summary -->
+            <div id="displayTotal" class="result-box"></div>
+
+        </div>
+    </div>
+
+    <script src="Coffe Shop.js"></script>
+
+</body>
+</html>
