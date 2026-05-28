@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gingerbread Runner Game</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="GingerBreadman.css">
+</head>
+
+<body>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="history.back()">
+        ← Back
+    </button>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🍪 Gingerbread Runner</h1>
+            <p>Click the runner to make him faster!</p>
+        </header>
+
+        <main class="race-area">
+            <div id="track">
+                <div id="finish-line"></div>
+
+                <div id="GingerBreadman" title="Click to speed up">
+                    <img 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlMiwXpWrCQa_yY4BMGiiQj1Y8bIan5bELBA&s" 
+                        alt="Gingerbread Runner"
+                    >
+                </div>
+            </div>
+
+            <button id="stopButton" class="stop-btn">
+                ⏹ Stop Race
+            </button>
+        </main>
+    </div>
+
+    <script src="GingerBreadman.js"></script>
+
+</body>
+</html>

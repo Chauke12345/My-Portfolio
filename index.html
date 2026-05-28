@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Miehleketo Chauke | Full-Stack Developer</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+:root{
+    --primary:#6c63ff;
+    --secondary:#00c6ff;
+    --bg:#070b14;
+    --card:#111827;
+    --text:#ffffff;
+    --muted:#b8c1d1;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Segoe UI',sans-serif;
+    overflow-x:hidden;
+}
+
+/* Background Glow */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+    opacity:.35;
+}
+
+body::before{
+    background:var(--primary);
+    top:-150px;
+    left:-150px;
+}
+
+body::after{
+    background:var(--secondary);
+    bottom:-150px;
+    right:-150px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background:rgba(10,10,15,.65);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar-brand{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.nav-link{
+    color:white !important;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:var(--secondary) !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.hero-badge{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    padding:10px 18px;
+    border-radius:30px;
+    display:inline-block;
+    margin-bottom:20px;
+    color:var(--secondary);
+}
+
+.hero-title {
+    font-size: clamp(1.9rem, 4vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+.gradient-text{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-description{
+    color:var(--muted);
+    font-size:1.1rem;
+    line-height:1.8;
+    max-width:700px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.btn-glow{
+    background:linear-gradient(45deg,var(--primary),var(--secondary));
+    border:none;
+    color:white;
+    padding:14px 28px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.btn-glow:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px rgba(108,99,255,.5);
+}
+
+.btn-outline-custom{
+    border:1px solid rgba(255,255,255,.2);
+    color:white;
+    padding:14px 28px;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.btn-outline-custom:hover{
+    background:white;
+    color:black;
+}
+
+.hero-image{
+    width:320px;
+    border-radius:50%;
+    border:4px solid rgba(255,255,255,.1);
+    box-shadow:0 0 40px rgba(108,99,255,.35);
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0px);}
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+    font-size:2.5rem;
+    font-weight:700;
+}
+
+.section-subtitle{
+    color:var(--muted);
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    backdrop-filter:blur(12px);
+    transition:.35s;
+}
+
+.glass:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-card{
+    overflow:hidden;
+    height:100%;
+}
+
+.project-card img{
+    height:220px;
+    width:100%;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:24px;
+}
+
+.project-content p{
+    color:var(--muted);
+}
+
+.badge-tech{
+    background:rgba(255,255,255,.08);
+    color:white;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:.75rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skill-card{
+    padding:35px 25px;
+    text-align:center;
+    height:100%;
+}
+
+.skill-icon{
+    font-size:2.8rem;
+    margin-bottom:20px;
+    color:var(--secondary);
+}
+
+/* =========================
+   CONTACT
+========================= */
+.form-control{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    padding: 14px 16px;
+    border-radius: 14px;
+    transition: .3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.form-control::placeholder{
+    color: rgba(255,255,255,0.55);
+}
+
+.form-control:focus{
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(0,198,255,0.12);
+}
+
+textarea.form-control{
+    resize: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+#about p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1rem;
+}
+
+#about h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 576px) {
+
+    .hero-section {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    #about p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    #about h5 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand text-white" href="#">
+            MC
+        </a>
+
+        <button class="navbar-toggler text-white"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMenu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-section" id="home">
+<div class="container">
+
+<div class="row align-items-center g-4">
+
+<!-- LEFT -->
+<div class="col-lg-7" data-aos="fade-right">
+
+<div class="hero-badge">
+    🚀 Open to Junior Full-Stack Developer Roles
+</div>
+
+<h1 class="hero-title mb-3">
+    Full-Stack Developer building
+    <span class="gradient-text">
+        backend-driven web systems
+    </span>
+</h1>
+
+<p class="hero-description">
+    I’m Miehleketo E. Chauke, an aspiring full-stack developer with training in HTML, CSS, JavaScript, Python, and Django. I enjoy creating responsive web applications and backend systems that solve real-world problems. Currently seeking a junior developer opportunity to grow and contribute in a collaborative development environment.
+</p>
+
+<!-- VALUE GRID -->
+<div class="row mt-4 g-2">
+
+<div class="col-12 col-md-6">
+    <div class="glass p-3 h-100">
+        <h6 class="mb-1">Backend Engineering</h6>
+        <small class="text-secondary">
+            Django, REST APIs, auth systems
+        </small>
+    </div>
+</div>
+
+<div class="col-12 col-md-6">
+    <div class="glass p-3 h-100">
+        <h6 class="mb-1">System Design</h6>
+        <small class="text-secondary">
+            DB modeling, workflows, architecture
+        </small>
+    </div>
+</div>
+
+<div class="col-12 col-md-6">
+    <div class="glass p-3 h-100">
+        <h6 class="mb-1">Frontend Integration</h6>
+        <small class="text-secondary">
+            Responsive UI with Bootstrap
+        </small>
+    </div>
+</div>
+
+<div class="col-12 col-md-6">
+    <div class="glass p-3 h-100">
+        <h6 class="mb-1">Deployment</h6>
+        <small class="text-secondary">
+            Render, GitHub, production hosting
+        </small>
+    </div>
+</div>
+
+</div>
+
+<!-- CTA -->
+<div class="hero-buttons d-flex flex-column flex-sm-row gap-3 mt-4">
+
+<a href="#projects" class="btn btn-glow w-100 w-sm-auto">
+    View Projects
+</a>
+
+<a href="#contact" class="btn btn-outline-custom w-100 w-sm-auto">
+    Contact Me
+</a>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="col-lg-5 text-center" data-aos="fade-left">
+
+<img src="assets/img/portfolio/WEB.jpg"
+     alt="Miehleketo Chauke"
+     class="hero-image img-fluid">
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5"
+     data-aos="fade-up">
+
+<h2 class="section-title">
+    About Me
+</h2>
+
+<p class="section-subtitle">
+    Developer with a systems-thinking mindset
+</p>
+
+</div>
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-5 text-center"
+     data-aos="zoom-in">
+
+<img src="assets/img/portfolio/which-development-job-is-right-for-you.jpg"
+     class="img-fluid rounded-circle shadow-lg"
+     style="max-width:280px;">
+
+</div>
+
+<div class="col-lg-7"
+     data-aos="fade-left">
+
+<div class="glass p-4">
+
+I transitioned into software development after building experience across IT support, healthcare administration, and foundational cybersecurity studies. Those roles sharpened my ability to troubleshoot complex issues, communicate effectively, and solve problems under pressure.
+
+Today, I apply those strengths to full-stack development, with a focus on building scalable backend systems, APIs, and user-centered applications using Python, Django, and JavaScript.
+
+I’m especially passionate about creating efficient, reliable software that combines strong functionality with a smooth user experience.
+
+
+<h5 class="mt-4">
+What I’m Looking For
+</h5>
+
+<p class="text-secondary">
+I’m currently seeking junior developer or internship opportunities where I can apply my skills in Python, Django, JavaScript, and full-stack development. I’m excited to contribute to real-world projects, grow within a collaborative team, and continue developing scalable applications that solve practical business problems.
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">
+                Applications built to improve workflows, automation, and user experience.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- PROJECT CARD -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+
+                <div class="glass project-card h-100 d-flex flex-column">
+
+                    <img src="assets/img/portfolio/tracker log2.png" class="img-fluid">
+
+                    <div class="project-content d-flex flex-column flex-grow-1">
+
+                        <h5 class="fw-bold mb-2">Spendlytics</h5>
+
+                      <p class="mb-3">
+    <p class="mb-3">
+A full-stack expense tracking platform that helps users monitor spending habits and gain financial insights through structured reporting.
+</p>
+
+<p class="project-text mb-3">
+<strong>Problem:</strong> Users struggle to understand spending patterns and manage budgets across multiple categories.
+</p>
+
+<ul class="project-highlights mb-3">
+    <li>User authentication and account management</li>
+    <li>Expense tracking with categorized transactions</li>
+    <li>Budget monitoring and spending summaries</li>
+    <li>PostgreSQL-based data storage and retrieval</li>
+</ul>
+
+<p class="project-text mb-3">
+<strong>Technical Highlights:</strong> Django and PostgreSQL system using structured models for expense categorization, authentication, and financial data handling.
+</p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">Python</span>
+                            <span class="badge-tech">Django</span>
+                            <span class="badge-tech">PostgreSQL</span>
+                            <span class="badge-tech">Bootstrap</span>
+                        </div>
+
+                        <!-- PUSH LINKS TO BOTTOM -->
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="https://tracker-app-dvyx.onrender.com" class="btn btn-glow btn-sm">Live</a>
+                            <a href="https://github.com/Chauke12345/Tracker-app.git"
+                               class="btn btn-outline-light btn-sm">
+                                <i class="fab fa-github me-1"></i> Code
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+
+                <div class="glass project-card h-100 d-flex flex-column">
+
+                    <img src="assets/img/portfolio/hospital image.png" class="img-fluid">
+
+                    <div class="project-content d-flex flex-column flex-grow-1">
+
+                        <h5 class="fw-bold mb-2">Hospital Management System</h5>
+
+                       <p class="mb-3">
+  <p class="mb-3">
+A full-stack hospital management system that centralizes patient records, appointments, and billing into a unified workflow platform.
+</p>
+
+<p class="project-text mb-3">
+<strong>Problem:</strong> Manual hospital administration causes scheduling conflicts, inefficient record keeping, and delays in patient management.
+</p>
+
+<ul class="project-highlights mb-3">
+    <li>Role-based authentication for patients and administrators</li>
+    <li>Appointment booking and scheduling system</li>
+    <li>Structured medical records management</li>
+    <li>Billing workflow and patient tracking</li>
+</ul>
+
+<p class="project-text mb-3">
+<strong>Technical Highlights:</strong> Django-based system using relational models and role-based access control for managing patients, appointments, and billing workflows.
+</p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">Python</span>
+                            <span class="badge-tech">Django</span>
+                            <span class="badge-tech">Bootstrap</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="https://miehleketo.pythonanywhere.com/" class="btn btn-glow btn-sm">Live</a>
+                            <a href="https://github.com/Chauke12345/Hospital_Patients_Management.git"
+                               class="btn btn-outline-light btn-sm">
+                                <i class="fab fa-github me-1"></i> Code
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+
+                <div class="glass project-card h-100 d-flex flex-column">
+
+                    <img src="assets/img/portfolio/loan-lending.webp" class="img-fluid">
+
+                    <div class="project-content d-flex flex-column flex-grow-1">
+
+                        <h5 class="fw-bold mb-2">Loan Lending System</h5>
+
+                        <p class="mb-3">
+    A system that automates loan applications, approval workflows, and repayment tracking for users and administrators.
+</p>
+
+<p class="project-text mb-3">
+    <strong>Problem:</strong> Manual loan processing leads to delays, inconsistent approvals, and poor tracking of repayments.
+</p>
+
+<ul class="project-highlights mb-3">
+    <li>Loan application submission and approval workflow</li>
+    <li>Customer profile and loan record management</li>
+    <li>Status-based loan processing (pending, approved, rejected)</li>
+    <li>Repayment tracking and updates</li>
+</ul>
+
+<p class="project-text mb-3">
+    <strong>Technical Highlights:</strong> Built with Django using ORM-based relational models to manage loan records, approval states, and repayment history with structured workflow logic.
+</p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">Python</span>
+                            <span class="badge-tech">Django</span>
+                            <span class="badge-tech">SQLite</span>
+                            <span class="badge-tech">Bootstrap</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="https://loan-app-management.onrender.com" class="btn btn-glow btn-sm">Live</a>
+                            <a href="https://github.com/Chauke12345/Loan-app-management.git"
+                               class="btn btn-outline-light btn-sm">
+                                <i class="fab fa-github me-1"></i> Code
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+
+                <div class="glass project-card h-100 d-flex flex-column">
+
+                    <img src="assets/img/portfolio/kof4.jpg" class="img-fluid">
+
+                    <div class="project-content d-flex flex-column flex-grow-1">
+
+                        <h5 class="fw-bold mb-2">Eddie's Gamehub</h5>
+<p class="mb-3">
+A gaming e-commerce platform that enables users to browse products, manage a shopping cart, and complete purchases through a structured checkout system.
+</p>
+
+<p class="project-text mb-3">
+<strong>Problem:</strong> Small retailers lack efficient systems for managing online product sales and customer orders.
+</p>
+
+<ul class="project-highlights mb-3">
+    <li>Product browsing with categories</li>
+    <li>Session-based shopping cart system</li>
+    <li>Checkout and order creation workflow</li>
+    <li>Order tracking and management system</li>
+</ul>
+
+<p class="project-text mb-3">
+<strong>Technical Note:</strong> Django-based system using session state for cart functionality and structured order workflows for processing user purchases.
+</p>
+
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">Python</span>
+                            <span class="badge-tech">Django</span>
+                            <span class="badge-tech">JavaScript</span>
+                            <span class="badge-tech">Bootstrap</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto">
+                            <a href="https://github.com/Chauke12345/Jobtracker-.git" class="btn btn-glow btn-sm">Demo</a>
+                            <a href="https://github.com/Chauke12345/Eddies-Gamehub.git"
+                               class="btn btn-outline-light btn-sm">
+                                <i class="fab fa-github me-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                    </div>
+                   <!-- PROJECT 5 -->
+<div class="col-md-6 col-lg-4" data-aos="fade-up">
+
+    <div class="glass project-card h-100 d-flex flex-column">
+
+        <img src="assets/img/portfolio/JOB.webp" class="img-fluid">
+
+        <div class="project-content d-flex flex-column flex-grow-1">
+
+            <h5 class="fw-bold mb-2">Jobtracker</h5>
+
+           <p class="mb-3">
+A job application tracking system that helps users manage applications, track progress, and stay organized throughout their job search.
+</p>
+
+<p class="project-text mb-3">
+<strong>Problem:</strong> Job seekers struggle to track applications, follow-ups, and communication across multiple platforms.
+</p>
+
+<ul class="project-highlights mb-3">
+    <li>Job application tracking with status updates</li>
+    <li>Follow-up reminders and scheduling</li>
+    <li>Communication and notes per application</li>
+    <li>Centralized dashboard for progress monitoring</li>
+</ul>
+
+<p class="project-text mb-3">
+<strong>Technical Highlights:</strong> Django CRUD system with structured database models for application tracking, status management, and user-specific data isolation.
+</p>
+            
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge-tech">Python</span>
+                <span class="badge-tech">Django</span>
+                <span class="badge-tech">JavaScript</span>
+                <span class="badge-tech">Bootstrap</span>
+            </div>
+
+            <div class="d-flex gap-2 mt-auto">
+                <a href="https://gunicorn-jobtrackrwsgi-production.up.railway.app/"
+                   class="btn btn-glow btn-sm">
+                    Live
+                </a>
+
+                <a href="https://github.com/Chauke12345/Jobtracker-.git"
+                   class="btn btn-outline-light btn-sm">
+                    <i class="fab fa-github me-1"></i> Code
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="py-5">
+
+<div class="container">
+
+<!-- SECTION HEADER -->
+<div class="text-center mb-5"
+     data-aos="fade-up">
+
+<h2 class="section-title">
+Skills
+</h2>
+
+<p class="section-subtitle">
+Technologies, tools, and engineering capabilities I use to build full-stack applications
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<!-- FRONTEND -->
+<div class="col-md-4"
+     data-aos="zoom-in">
+
+<div class="glass skill-card">
+
+<div class="skill-icon">
+<i class="fas fa-code"></i>
+</div>
+
+<h5>
+Frontend Development
+</h5>
+
+<p class="text-secondary">
+Responsive UI development using HTML, CSS, Bootstrap, and JavaScript. Experience building interactive, mobile-friendly interfaces.
+</p>
+
+</div>
+</div>
+
+<!-- BACKEND -->
+<div class="col-md-4"
+     data-aos="zoom-in"
+     data-aos-delay="100">
+
+<div class="glass skill-card">
+
+<div class="skill-icon">
+<i class="fas fa-server"></i>
+</div>
+
+<h5>
+Backend Development
+</h5>
+
+<p class="text-secondary">
+Django-based backend systems, REST API development, authentication workflows, and database-driven application architecture using Python.
+</p>
+
+</div>
+</div>
+
+<!-- TOOLS -->
+<div class="col-md-4"
+     data-aos="zoom-in"
+     data-aos-delay="200">
+
+<div class="glass skill-card">
+
+<div class="skill-icon">
+<i class="fas fa-tools"></i>
+</div>
+
+<h5>
+Development & Deployment Tools
+</h5>
+
+<p class="text-secondary">
+Git & GitHub version control, VS Code development workflow, and deployment using Render for full-stack applications.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<!-- EXTRA SKILLS ROW -->
+<div class="row g-4 mt-2">
+
+<div class="col-md-12"
+     data-aos="fade-up">
+
+<div class="glass skill-card">
+
+<div class="skill-icon">
+<i class="fas fa-layer-group"></i>
+</div>
+
+<h5>
+Core Engineering Strengths
+</h5>
+
+<p class="text-secondary">
+API design, authentication systems, database modeling, CRUD application development, problem-solving, and system thinking for real-world business applications.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5"
+     data-aos="fade-up">
+
+<h2 class="section-title">
+Contact
+</h2>
+
+<p class="section-subtitle">
+Let’s build something together
+</p>
+
+</div>
+
+<div class="row justify-content-center">
+
+<div class="col-lg-7"
+     data-aos="fade-up">
+
+<div class="glass p-4">
+
+<form action="https://formspree.io/f/xeevvqkp"
+      method="POST">
+
+<input type="text"
+       class="form-control mb-3"
+       name="name"
+       placeholder="Your Name"
+       required>
+
+<input type="email"
+       class="form-control mb-3"
+       name="email"
+       placeholder="Your Email"
+       required>
+
+<textarea class="form-control mb-3"
+          rows="5"
+          name="message"
+          placeholder="Your Message"
+          required></textarea>
+
+<button class="btn btn-glow w-100">
+    Send Message
+</button>
+
+</form>
+<div class="text-center mt-3">
+
+<a href="https://wa.me/2733141222"
+   target="_blank"
+   class="btn btn-success w-100 mt-2">
+
+   <i class="fab fa-whatsapp me-2"></i>
+   Chat on WhatsApp
+</a>
+
+</div>
+
+<div class="text-center mt-4">
+
+<a href="assets/img/portfolio/Miehleketo_Edward _Chauke_CV.pdf"
+   class="btn btn-outline-light me-2"
+   download>
+   Download CV
+</a>
+
+<a href="assets/img/portfolio/cover letter.pdf"
+   class="btn btn-outline-light"
+   download>
+   Cover Letter
+</a>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="py-4 text-center">
+
+<div class="container">
+
+<p class="text-secondary mb-3">
+© 2026 Miehleketo Chauke. All Rights Reserved.
+</p>
+
+<div class="d-flex justify-content-center gap-4">
+
+<a href="https://github.com/Chauke12345"
+   class="text-white fs-4">
+   <i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/miehleketo-chauke-9301a8232/"
+   class="text-white fs-4">
+   <i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:miehleketochauke360@gmail.com?subject=Junior%20Full-Stack%20Developer%20Opportunity"
+   class="text-white fs-4">
+   <i class="fas fa-envelope"></i>
+</a>
+
+</div>
+</div>
+</footer>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    once:true
+});
+</script>
+
+</body>
+</html>

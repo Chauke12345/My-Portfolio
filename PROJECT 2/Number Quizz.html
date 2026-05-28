@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+
+   
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .game-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00d4ff;
+        }
+
+        img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 20px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #dfe6e9;
+        }
+
+        .play-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #00d4ff, #007bff);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .play-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+    </style>
+</head>
+<!-- Back Button -->
+<button id="backButton" class="back-btn">
+    ← Back
+</button>
+
+<body>
+    <div class="game-container">
+        <h1>🎉 You Got It!</h1>
+
+        <img src="HAPPY.avif" alt="Success Celebration">
+
+        <p>
+            Congratulations! You guessed the secret number correctly.
+            Ready to test your luck again?
+        </p>
+
+        <button class="play-btn" onclick="location.reload()">
+            Play Again
+        </button>
+    </div>
+
+    <script src="Number Quizz.js"></script>
+</body>
+</html>
