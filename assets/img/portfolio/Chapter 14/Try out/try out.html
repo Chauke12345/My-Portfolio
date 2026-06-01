@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Use Conditional Statements</title>
+
+    <link rel="stylesheet" href="try out.css">
+
+</head>
+
+<body>
+    <h1> Beverages</h1>
+    <div id="orderForm">
+        <label>How many Bev do you want?
+            <input type="number" id="numBeverages" />
+        </label>
+        <br />
+        <br />
+        <label>What kind of beverages?
+            <select id="typeBeverage">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="juice">Juice</option>
+                <opition value="soda">Soda</option>
+            </select>
+        </label>
+        <br />
+        <br />
+        <label>Where do you live?
+            <select id="deliveryCity">
+                <option value="Midrand">Midrand</option>
+                <option value="Fourways">Fourways</option>
+                <option value="Feartherbrooks">Feartherbrooks</option>
+                <option value="Sunninghill">Sunninghill</option>
+            </select>
+        </label>
+        <br />
+        <br />
+        <label>Are you over 18?
+            <select id="over18">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </label>
+        <br />
+        <br />
+        <button type="button" id="placeOrder">Place
+            Order</button>
+    </div>
+    <div id="displayTotal"></div>
+
+    <script src='try out.js'></script>
+    <!-- <script src='listings.js'></script> -->
+</body>
+
+</html>
