@@ -704,411 +704,269 @@ textarea.form-control{
 <section id="projects" class="py-5">
 
 <div class="row g-4">
+<!-- ================= FEATURED PROJECT 01: Hlophe Online Ordering ================= -->
 
-    <!-- ================= FEATURED PROJECT 01: Career Pilot AI ================= -->
-<!-- ================= Career Pilot AI ================= -->
-
- 
 <div class="col-md-6 col-lg-4" data-aos="fade-up">
 
     <div class="glass project-card h-100 d-flex flex-column">
 
         <!-- Project Image -->
-        <img src="assets/img/portfolio/ai.png"
-             class="img-fluid"
-             alt="Career Pilot AI">
-
+        <img src="assets/img/portfolio/Hlophe-icon-.png"
+     class="img-fluid"
+     alt="Hlophe Online Ordering System">
         <div class="project-content d-flex flex-column flex-grow-1">
-<!-- Project Number -->
-<span class="project-number mb-2">
-    Project 01
-</span>
 
-<!-- Project Title -->
-<h5 class="fw-bold mb-2">
-    Career Pilot AI
-</h5>
+            <!-- Project Number -->
+            <span class="project-number mb-2">
+                Project 01
+            </span>
 
-<!-- Short Description -->
-<p class="mb-3">
-    An AI-powered career platform that helps job seekers analyze
-    resumes, match skills with opportunities, track applications,
-    and improve career readiness.
-</p>
+            <!-- Project Title -->
+            <h5 class="fw-bold mb-2">
+                Hlophe Online Ordering
+            </h5>
+
+            <!-- Short Description -->
+            <p class="mb-3">
+                A production Django ordering and operations system for
+                Hlophe Shisanyama that digitises customer ordering,
+                kitchen workflow, order tracking and business settlement
+                management.
+            </p>
 
             <!-- Case Study Button -->
             <button
                 class="btn btn-outline-primary btn-sm"
                 data-bs-toggle="collapse"
-                data-bs-target="#careerPilotAI">
-
-                🔍 Explore Case Study
-
-            </button>
-<!-- Expandable Details -->
-<div class="collapse mt-4" id="careerPilotAI">
-
-    <div class="project-details">
-
-        <p class="project-text mb-3">
-            <strong>Problem:</strong>
-            I noticed that many job seekers struggle with improving their
-            CVs, understanding missing skills, and keeping track of multiple
-            job applications. I wanted to build a platform that could make
-            the job search process more organised and data-driven.
-        </p>
-
-
-        <p class="project-text mb-3">
-            <strong>Solution:</strong>
-            Career Pilot AI is an AI-powered career platform that helps users
-            analyse resumes, compare skills against job requirements, track
-            applications, and receive AI-based career recommendations.
-        </p>
-
-
-        <h6 class="fw-bold">
-            Features
-        </h6>
-
-
-        <ul class="project-highlights mb-3">
-
-            <li>
-                AI resume analysis with ATS-style scoring
-            </li>
-
-            <li>
-                CV-to-job matching and skill gap identification
-            </li>
-
-            <li>
-                Job application tracking dashboard
-            </li>
-
-            <li>
-                AI career assistant for guidance and recommendations
-            </li>
-
-        </ul>
-
-
-        <p class="project-text mb-3">
-            <strong>Technical Highlights:</strong>
-            Built with Django REST Framework, PostgreSQL, JavaScript,
-            JWT authentication, document processing, and Groq AI
-            integration for intelligent resume and job analysis.
-        </p>
-
-
-        <!-- Technical Challenges -->
-        <h6 class="fw-bold">
-            Technical Challenges & Solutions
-        </h6>
-
-
-        <ul class="project-highlights mb-3">
-
-
-            <li>
-                <strong>Challenge: Integrating AI Responses Into My Application</strong><br>
-                One of the biggest challenges was making sure AI-generated
-                responses could be used reliably by the frontend dashboard.
-                AI responses are not always returned in the same format.
-                <br><br>
-                <strong>Solution:</strong>
-                I improved my prompt design, structured the expected AI output,
-                and added validation to make sure the application could
-                process the responses correctly.
-            </li>
-
-
-            <li>
-                <strong>Challenge: Building Secure User Authentication</strong><br>
-                Protecting user information and making sure only authorised
-                users could access their data was an important part of the
-                application.
-                <br><br>
-                <strong>Solution:</strong>
-                I implemented JWT authentication using access and refresh
-                tokens to secure API endpoints and manage user sessions.
-            </li>
-
-
-            <li>
-                <strong>Challenge: Extracting Information From CV Documents</strong><br>
-                Reading information from uploaded resumes was challenging
-                because different CV formats contain different structures.
-                <br><br>
-                <strong>Solution:</strong>
-                I researched document processing techniques and implemented
-                PDF and DOCX extraction using Python libraries to convert
-                uploaded files into readable text for AI analysis.
-            </li>
-
-
-            <li>
-                <strong>Challenge: Designing the Application Database</strong><br>
-                The system needed to manage users, profiles, applications,
-                and application tracking events while keeping the data
-                organised.
-                <br><br>
-                <strong>Solution:</strong>
-                I designed Django models and relationships using the ORM,
-                which helped me understand how to structure data for a
-                larger full-stack application.
-            </li>
-
-
-            <li>
-                <strong>Challenge: Deploying a Full AI Application</strong><br>
-                Deploying an application with authentication, databases,
-                static files, and external APIs required additional testing.
-                <br><br>
-                <strong>Solution:</strong>
-                I configured environment variables, PostgreSQL, Gunicorn,
-                and Railway deployment settings to successfully run the
-                application in production.
-            </li>
-
-
-        </ul>
-
-
-        <!-- Technologies -->
-        <div class="d-flex flex-wrap gap-2 mb-3">
-
-            <span class="badge-tech">Python</span>
-            <span class="badge-tech">Django</span>
-            <span class="badge-tech">DRF</span>
-            <span class="badge-tech">PostgreSQL</span>
-            <span class="badge-tech">JavaScript</span>
-            <span class="badge-tech">JWT</span>
-            <span class="badge-tech">Groq API</span>
-            <span class="badge-tech">AI Integration</span>
-            <span class="badge-tech">Railway</span>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-  <!-- Action Buttons -->
-<div class="d-flex gap-2 mt-auto">
-
-    <a href="https://career-pilot-production-4a61.up.railway.app/"
-       class="btn btn-glow btn-sm"
-       target="_blank"
-       rel="noopener noreferrer">
-
-        Live
-    </a>
-
-
-    <a href="https://github.com/Chauke12345/Career-Pilot"
-       class="btn btn-outline-light btn-sm"
-       target="_blank"
-       rel="noopener noreferrer">
-
-        <i class="fab fa-github me-1"></i>
-        Code
-
-    </a>
-
-</div>
-
-</div> <!-- /.project-content -->
-
-</div> <!-- /.project-card -->
-
-</div> <!-- /.col -->
-
-    <!-- ================= FEATURED PROJECT 02: Hospital Management System ================= -->
-<!-- ================= Hospital Management System ================= -->
-<div class="col-md-6 col-lg-4" data-aos="fade-up">
-
-    <div class="glass project-card h-100 d-flex flex-column">
-
-        <!-- Project Image -->
-        <img src="assets/img/portfolio/hospital image.png"
-             class="img-fluid"
-             alt="Hospital Management System">
-
-        <div class="project-content d-flex flex-column flex-grow-1">
-
-    <!-- Project Number -->
-    <span class="project-number mb-2">
-        Project 02
-    </span>
-
-    <!-- Project Title -->
-    <h5 class="fw-bold mb-2">
-        Hospital Management System
-    </h5>
-
-    <!-- Short Description -->
-    <p class="mb-3">
-        A full-stack hospital management system that centralizes
-        patient records, appointments, and administrative workflows
-        into one platform.
-    </p>
-
-            <!-- Case Study Button -->
-            <button
-                class="btn btn-outline-primary btn-sm"
-                data-bs-toggle="collapse"
-                data-bs-target="#hospitalManagement">
+                data-bs-target="#hlopheOrdering">
 
                 🔍 Explore Case Study
 
             </button>
 
-   <!-- Expandable Details -->
-<div class="collapse mt-4" id="hospitalManagement">
 
-    <div class="project-details">
+            <!-- Expandable Details -->
+            <div class="collapse mt-4" id="hlopheOrdering">
 
-        <p class="project-text mb-3">
-            <strong>Problem:</strong>
-            Having experience around healthcare workflows helped me understand
-            how important organised patient information and efficient processes
-            are. Manual processes can make it difficult to manage appointments,
-            patient records, and daily administrative tasks.
-        </p>
+                <div class="project-details">
 
-
-        <p class="project-text mb-3">
-            <strong>Solution:</strong>
-            I built a Hospital Management System that helps organise patient
-            information, appointments, admissions, and healthcare workflows
-            in one centralised platform.
-        </p>
+                    <p class="project-text mb-3">
+                        <strong>Problem:</strong>
+                        Traditional food ordering can rely heavily on verbal
+                        orders and manual coordination between customers and
+                        staff. This can make it difficult to manage incoming
+                        orders, track preparation progress and maintain an
+                        organised history of completed orders.
+                    </p>
 
 
-        <h6 class="fw-bold">
-            Features
-        </h6>
+                    <p class="project-text mb-3">
+                        <strong>Solution:</strong>
+                        I developed a Django-powered ordering and operations
+                        platform for Hlophe Shisanyama. Customers can place
+                        orders online while staff receive and manage those
+                        orders through a dedicated operational dashboard.
+                        The system also provides management with completed
+                        order and platform settlement information.
+                    </p>
 
 
-        <ul class="project-highlights mb-3">
-
-            <li>
-                Patient record management
-            </li>
-
-            <li>
-                Doctor and appointment management
-            </li>
-
-            <li>
-                Admission and patient tracking workflows
-            </li>
-
-            <li>
-                User authentication and access management
-            </li>
-
-        </ul>
+                    <h6 class="fw-bold">
+                        Features
+                    </h6>
 
 
-        <p class="project-text mb-3">
-            <strong>Technical Highlights:</strong>
-            Built with Django and PostgreSQL using Django ORM,
-            relational database models, authentication workflows,
-            CRUD operations, and role-based access control.
-        </p>
+                    <ul class="project-highlights mb-3">
+
+                        <li>
+                            QR-based online customer ordering
+                        </li>
+
+                        <li>
+                            Dynamic meat, sides and drinks menu
+                        </li>
+
+                        <li>
+                            Amount-based meat ordering and fixed-price items
+                        </li>
+
+                        <li>
+                            Automatic estimated order total calculation
+                        </li>
+
+                        <li>
+                            Staff dashboard for incoming customer orders
+                        </li>
+
+                        <li>
+                            Automatic staff dashboard refresh for new orders
+                        </li>
+
+                        <li>
+                            Braai Master assignment
+                        </li>
+
+                        <li>
+                            Order status workflow from received to collected
+                        </li>
+
+                        <li>
+                            Final order total recording
+                        </li>
+
+                        <li>
+                            Counter order support for walk-in customers
+                        </li>
+
+                        <li>
+                            Completed and cancelled order history
+                        </li>
+
+                        <li>
+                            EdVance owner settlement and platform fee dashboard
+                        </li>
+
+                    </ul>
 
 
-        <!-- Technical Challenges -->
-        <h6 class="fw-bold">
-            Technical Challenges & Solutions
-        </h6>
+                    <p class="project-text mb-3">
+                        <strong>Technical Highlights:</strong>
+                        Built with Python and Django using PostgreSQL for
+                        production data storage, Django authentication and
+                        groups for staff access, JavaScript for interactive
+                        order calculations, responsive HTML/CSS interfaces,
+                        WhiteNoise for static files and Railway for production
+                        deployment.
+                    </p>
 
 
-        <ul class="project-highlights mb-3">
+                    <!-- Technical Challenges -->
+                    <h6 class="fw-bold">
+                        Technical Challenges & Solutions
+                    </h6>
 
 
-            <li>
-                <strong>Challenge: Designing Healthcare Data Relationships</strong><br>
-                One of the biggest challenges was deciding how different
-                healthcare records should connect, such as patients,
-                doctors, appointments, admissions, and prescriptions.
-                <br><br>
-                <strong>Solution:</strong>
-                I designed Django models with clear relationships using
-                foreign keys and the ORM, which helped me understand how
-                real-world processes can be represented in a database.
-            </li>
+                    <ul class="project-highlights mb-3">
+
+                        <li>
+                            <strong>Challenge: Supporting Different Pricing Models</strong><br>
+                            Meat orders needed customers to enter the amount
+                            they wanted to spend, while drinks and sides used
+                            fixed prices and quantities.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I designed the menu system with separate pricing
+                            types so the same ordering platform can handle
+                            amount-based and fixed-price products.
+                        </li>
 
 
-            <li>
-                <strong>Challenge: Managing Different User Permissions</strong><br>
-                Different users need access to different parts of the system,
-                which required thinking carefully about security and access.
-                <br><br>
-                <strong>Solution:</strong>
-                I implemented authentication and permission-based access
-                controls to make sure users could only access features
-                relevant to their roles.
-            </li>
+                        <li>
+                            <strong>Challenge: Managing the Order Workflow</strong><br>
+                            Staff needed to know which orders were new,
+                            being prepared, being braaied, ready for collection
+                            or already completed.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I implemented a structured order-status workflow
+                            that allows staff to update each order as it moves
+                            through the preparation process.
+                        </li>
 
 
-            <li>
-                <strong>Challenge: Turning Real Healthcare Workflows Into Software</strong><br>
-                Converting processes like admissions, appointments, and
-                patient tracking into application features required planning.
-                <br><br>
-                <strong>Solution:</strong>
-                I analysed existing healthcare workflows and broke them down
-                into smaller features before designing the application
-                structure.
-            </li>
+                        <li>
+                            <strong>Challenge: Keeping New Orders Visible to Staff</strong><br>
+                            New online orders needed to appear quickly without
+                            requiring staff to constantly refresh the dashboard
+                            manually.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I added automatic dashboard refreshing so incoming
+                            orders become visible to staff during operations.
+                        </li>
 
 
-            <li>
-                <strong>Challenge: Keeping Data Accurate and Organised</strong><br>
-                Healthcare systems depend on reliable information, so
-                preventing incorrect or incomplete data was important.
-                <br><br>
-                <strong>Solution:</strong>
-                I used Django forms, model validation, and database
-                relationships to improve data consistency and reduce errors.
-            </li>
+                        <li>
+                            <strong>Challenge: Separating Customer, Staff and Management Access</strong><br>
+                            Customers need public access to ordering while
+                            operational and financial information must remain
+                            restricted.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I created separate customer, staff and owner
+                            workflows using Django authentication, permissions
+                            and user groups.
+                        </li>
 
 
-        </ul>
+                        <li>
+                            <strong>Challenge: Tracking Platform Revenue</strong><br>
+                            The platform needed a way to distinguish restaurant
+                            order revenue from EdVance platform fees.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I built an owner settlement dashboard that calculates
+                            platform fees from completed orders and tracks paid
+                            and outstanding settlements by month.
+                        </li>
 
 
-        <!-- Technologies -->
-        <div class="d-flex flex-wrap gap-2 mb-3">
+                        <li>
+                            <strong>Challenge: Production Deployment & Static Files</strong><br>
+                            Production deployment required PostgreSQL,
+                            Gunicorn, static-file handling and environment
+                            configuration to work correctly on Railway.
+                            <br><br>
 
-            <span class="badge-tech">Python</span>
-            <span class="badge-tech">Django</span>
-            <span class="badge-tech">Bootstrap</span>
-            <span class="badge-tech">PostgreSQL</span>
+                            <strong>Solution:</strong>
+                            I configured the Django production environment,
+                            PostgreSQL database, Gunicorn, WhiteNoise and
+                            Railway deployment workflow and tested the complete
+                            ordering process in production.
+                        </li>
 
-        </div>
+                    </ul>
 
 
-    </div>
+                    <!-- Technologies -->
+                    <div class="d-flex flex-wrap gap-2 mb-3">
 
-</div>
+                        <span class="badge-tech">Python</span>
+                        <span class="badge-tech">Django</span>
+                        <span class="badge-tech">PostgreSQL</span>
+                        <span class="badge-tech">JavaScript</span>
+                        <span class="badge-tech">HTML5</span>
+                        <span class="badge-tech">CSS3</span>
+                        <span class="badge-tech">Django Auth</span>
+                        <span class="badge-tech">WhiteNoise</span>
+                        <span class="badge-tech">Gunicorn</span>
+                        <span class="badge-tech">Railway</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
 
             <!-- Action Buttons -->
             <div class="d-flex gap-2 mt-auto">
 
-                <a href="https://miehleketo.pythonanywhere.com/"
+                <a href="https://web-production-6e361.up.railway.app/"
                    class="btn btn-glow btn-sm"
                    target="_blank"
                    rel="noopener noreferrer">
 
                     Live
-
                 </a>
 
-                <a href="https://github.com/Chauke12345/Hospital_Patients_Management.git"
+
+                <a href="https://github.com/Chauke12345/Hlophe-online-ordering"
                    class="btn btn-outline-light btn-sm"
                    target="_blank"
                    rel="noopener noreferrer">
@@ -1120,11 +978,297 @@ textarea.form-control{
 
             </div>
 
-        </div>
+        </div> <!-- /.project-content -->
 
-    </div>
+    </div> <!-- /.project-card -->
 
-</div>
+</div> <!-- /.col -->
+<!-- ================= FEATURED PROJECT 02: SpareQuote ================= -->
+
+<div class="col-md-6 col-lg-4" data-aos="fade-up">
+
+    <div class="glass project-card h-100 d-flex flex-column">
+
+        <!-- Project Image -->
+       <img src="assets/img/portfolio/AUTO.jpg"
+     class="img-fluid"
+     alt="SpareQuote Auto Parts Quotation Platform">
+
+        <div class="project-content d-flex flex-column flex-grow-1">
+
+            <!-- Project Number -->
+            <span class="project-number mb-2">
+                Project 02
+            </span>
+
+            <!-- Project Title -->
+            <h5 class="fw-bold mb-2">
+                SpareQuote
+            </h5>
+
+            <!-- Short Description -->
+            <p class="mb-3">
+                A Django-powered auto-parts quotation platform that connects
+                customers with participating spare-parts shops, allowing
+                customers to request parts and compare quotes without
+                phoning or visiting multiple stores.
+            </p>
+
+
+            <!-- Case Study Button -->
+            <button
+                class="btn btn-outline-primary btn-sm"
+                data-bs-toggle="collapse"
+                data-bs-target="#spareQuote">
+
+                🔍 Explore Case Study
+
+            </button>
+
+
+            <!-- Expandable Details -->
+            <div class="collapse mt-4" id="spareQuote">
+
+                <div class="project-details">
+
+                    <p class="project-text mb-3">
+                        <strong>Problem:</strong>
+                        Finding vehicle parts can require customers to call
+                        or visit several spare-parts shops individually to
+                        check availability and pricing. This takes time for
+                        customers and creates repetitive enquiries for shops.
+                    </p>
+
+
+                    <p class="project-text mb-3">
+                        <strong>Solution:</strong>
+                        I developed SpareQuote, a multi-shop quotation
+                        platform where customers submit one vehicle-part
+                        request and participating spare-parts shops can
+                        respond with quotations through their own dashboards.
+                        Customers can then track their request and compare
+                        available quotes.
+                    </p>
+
+
+                    <h6 class="fw-bold">
+                        Features
+                    </h6>
+
+
+                    <ul class="project-highlights mb-3">
+
+                        <li>
+                            Customer spare-part quotation requests
+                        </li>
+
+                        <li>
+                            Vehicle make, model, year and engine details
+                        </li>
+
+                        <li>
+                            VIN and licence-disc information support
+                        </li>
+
+                        <li>
+                            Licence disc image upload
+                        </li>
+
+                        <li>
+                            Multiple participating spare-parts shops
+                        </li>
+
+                        <li>
+                            Individual secure shop accounts
+                        </li>
+
+                        <li>
+                            Shop quotation dashboard
+                        </li>
+
+                        <li>
+                            Quote submission and update workflow
+                        </li>
+
+                        <li>
+                            Customer request tracking
+                        </li>
+
+                        <li>
+                            Quote acceptance workflow
+                        </li>
+
+                        <li>
+                            Request and quotation history
+                        </li>
+
+                        <li>
+                            Shop password management
+                        </li>
+
+                        <li>
+                            QR-based customer access for participating shops
+                        </li>
+
+                    </ul>
+
+
+                    <p class="project-text mb-3">
+                        <strong>Technical Highlights:</strong>
+                        Built with Python and Django using PostgreSQL,
+                        Django authentication, relational database models,
+                        image uploads, responsive HTML/CSS interfaces and
+                        production deployment on Railway.
+                    </p>
+
+
+                    <!-- Technical Challenges -->
+                    <h6 class="fw-bold">
+                        Technical Challenges & Solutions
+                    </h6>
+
+
+                    <ul class="project-highlights mb-3">
+
+                        <li>
+                            <strong>Challenge: Supporting Multiple Spare-Part Shops</strong><br>
+                            The platform needed to allow several independent
+                            shops to participate without exposing one shop's
+                            account information or management controls to
+                            another.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I designed a Shop model connected to authenticated
+                            Django users, allowing each participating business
+                            to access its own account and quotation workflow.
+                        </li>
+
+
+                        <li>
+                            <strong>Challenge: Matching Customer Requests With Shops</strong><br>
+                            A single customer request needed to be available
+                            to participating shops while keeping each shop's
+                            quotation separate.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I designed relational Django models that connect
+                            part requests, shops and quotations while keeping
+                            each submitted quote independently manageable.
+                        </li>
+
+
+                        <li>
+                            <strong>Challenge: Managing Quote Acceptance</strong><br>
+                            Once a customer accepted a quotation, the system
+                            needed to clearly identify the successful quote
+                            and prevent the request workflow from becoming
+                            confusing.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I implemented quote and request status workflows
+                            so accepted quotations can be identified and
+                            reflected across the relevant dashboards.
+                        </li>
+
+
+                        <li>
+                            <strong>Challenge: Capturing Accurate Vehicle Information</strong><br>
+                            Spare-part identification depends heavily on
+                            correct vehicle details, and customers may not
+                            always have all the information available.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I designed the request form to capture vehicle
+                            make, model, year, engine and VIN information,
+                            with support for uploading a licence-disc image.
+                        </li>
+
+
+                        <li>
+                            <strong>Challenge: Secure Shop Authentication</strong><br>
+                            Participating businesses needed individual login
+                            credentials and the ability to manage their own
+                            passwords.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I used Django's authentication system to create
+                            individual shop users and added a dedicated
+                            password-change workflow.
+                        </li>
+
+
+                        <li>
+                            <strong>Challenge: Production File & Database Management</strong><br>
+                            Deploying the application required handling
+                            PostgreSQL data, customer uploads, static files
+                            and production configuration.
+                            <br><br>
+
+                            <strong>Solution:</strong>
+                            I configured the Django production environment,
+                            PostgreSQL database, static/media handling,
+                            Gunicorn and Railway deployment settings.
+                        </li>
+
+                    </ul>
+
+
+                    <!-- Technologies -->
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+
+                        <span class="badge-tech">Python</span>
+                        <span class="badge-tech">Django</span>
+                        <span class="badge-tech">PostgreSQL</span>
+                        <span class="badge-tech">JavaScript</span>
+                        <span class="badge-tech">HTML5</span>
+                        <span class="badge-tech">CSS3</span>
+                        <span class="badge-tech">Django Auth</span>
+                        <span class="badge-tech">File Uploads</span>
+                        <span class="badge-tech">QR Codes</span>
+                        <span class="badge-tech">Railway</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Action Buttons -->
+            <div class="d-flex gap-2 mt-auto">
+
+                <a href="https://web-production-96ad4a.up.railway.app/"
+                   class="btn btn-glow btn-sm"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Live
+
+                </a>
+
+
+                <a href="https://github.com/Chauke12345/Spare-Quote"
+                   class="btn btn-outline-light btn-sm"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <i class="fab fa-github me-1"></i>
+                    Code
+
+                </a>
+
+            </div>
+
+        </div> <!-- /.project-content -->
+
+    </div> <!-- /.project-card -->
+
+</div> <!-- /.col -->
 
     <!-- ================= FEATURED PROJECT 03: AMLO Shoe Store ================= -->
 <!-- ================= AMLO Shoe Store ================= -->
